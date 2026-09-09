@@ -70,10 +70,10 @@ const pair = await getRate('USD', 'HTG', { apiKey: 'art_live_...' });
 {
   bank: 'brh',
   name: 'Banque de la République d\'Haïti',
-  rate_date: '2026-09-05',   // Banque de la République d'Haïti's own publication date
+  rate_date: '2026-09-09',   // Banque de la République d'Haïti's own publication date
   source: 'USD',
   target: 'HTG',
-  rate: 130.5307,
+  rate: 130.4876,
   rate_type: 'reference',
   derived: false,
   method: 'published',
@@ -98,11 +98,11 @@ console.log(table.rate_date, table.rates.length);
 {
   bank: 'brh',
   name: 'Banque de la République d\'Haïti',
-  rate_date: '2026-09-05',
+  rate_date: '2026-09-09',
   rates: [
-    { "base": "USD", "quote": "HTG", "type": "reference", "value": 130.5307 },
-    { "base": "USD", "quote": "HTG", "type": "sell", "value": 131.1368 },
-    { "base": "USD", "quote": "HTG", "type": "buy", "value": 130.3511 },
+    { "base": "USD", "quote": "HTG", "type": "reference", "value": 130.4876 },
+    { "base": "USD", "quote": "HTG", "type": "sell", "value": 131.1807 },
+    { "base": "USD", "quote": "HTG", "type": "buy", "value": 130.2794 },
     // … the rest of the published table (1 currency vs HTG)
   ],
   disclaimer: '…'
@@ -142,7 +142,7 @@ Paid plans. One resolved rate per publication date — ready for charting, reval
 import { getHistory } from 'brh-exchange-rate';
 
 const series = await getHistory(
-  { source: 'USD', target: 'HTG', from: '2026-01-01', to: '2026-09-05' },
+  { source: 'USD', target: 'HTG', from: '2026-01-01', to: '2026-09-09' },
   { apiKey: 'art_live_...' }
 );
 ```
@@ -155,11 +155,11 @@ const series = await getHistory(
   source: 'USD',
   target: 'HTG',
   from: '2026-01-01',
-  to: '2026-09-05',
+  to: '2026-09-09',
   count: 152,
   rates: [
     // one entry per publication date
-    { date: '2026-09-05', rate: 130.5307, rate_type: 'reference', derived: false, method: 'published' },
+    { date: '2026-09-09', rate: 130.4876, rate_type: 'reference', derived: false, method: 'published' },
     // …
   ],
   disclaimer: '…'
@@ -237,6 +237,14 @@ getRate('USD', 'HTG', { apiKey: 'art_live_...' }).then((pair) => console.log(pai
 | `getLatestRates({ apiKey })` | Free | The central bank's full latest published table |
 | `getRatesForDate(date, { apiKey, source?, target? })` | Paid | The official table (or one pair) for a YYYY-MM-DD date |
 | `getHistory({ symbol \| source+target, from?, to? }, { apiKey })` | Paid | Daily series since 2026 |
+
+## 📥 Bulk data (no key)
+
+Need the whole archive rather than an API call? The same published tables are mirrored daily as open data:
+
+- Hugging Face: [AllRates/central-bank-exchange-rates](https://huggingface.co/datasets/AllRates/central-bank-exchange-rates) — one CSV per institution (`rates/brh.csv`)
+- Kaggle: [allratestoday/central-bank-exchange-rates](https://www.kaggle.com/datasets/allratestoday/central-bank-exchange-rates)
+- CDN JSON: `https://cdn.jsdelivr.net/gh/AllRates-Today/central-bank-exchange-rates@main/data/brh/latest.json`
 
 ## 🔗 Links
 
