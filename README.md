@@ -85,10 +85,10 @@ const pair = await getRate('USD', 'HTG', { apiKey: 'art_live_...' });
 {
   bank: 'brh',
   name: 'Banque de la République d\'Haïti',
-  rate_date: '2026-09-09',   // Banque de la République d'Haïti's own publication date
+  rate_date: '2026-09-25',   // Banque de la République d'Haïti's own publication date
   source: 'USD',
   target: 'HTG',
-  rate: 130.4876,
+  rate: 130.6863,
   rate_type: 'reference',
   derived: false,
   method: 'published',
@@ -113,11 +113,11 @@ console.log(table.rate_date, table.rates.length);
 {
   bank: 'brh',
   name: 'Banque de la République d\'Haïti',
-  rate_date: '2026-09-09',
+  rate_date: '2026-09-25',
   rates: [
-    { "base": "USD", "quote": "HTG", "type": "reference", "value": 130.4876 },
-    { "base": "USD", "quote": "HTG", "type": "sell", "value": 131.1807 },
-    { "base": "USD", "quote": "HTG", "type": "buy", "value": 130.2794 },
+    { "base": "USD", "quote": "HTG", "type": "reference", "value": 130.6863 },
+    { "base": "USD", "quote": "HTG", "type": "sell", "value": 131.2042 },
+    { "base": "USD", "quote": "HTG", "type": "buy", "value": 130.5439 },
     // … the rest of the published table (1 currency vs HTG)
   ],
   disclaimer: '…'
@@ -157,7 +157,7 @@ Paid plans. One resolved rate per publication date — ready for charting, reval
 import { getHistory } from 'brh-exchange-rate';
 
 const series = await getHistory(
-  { source: 'USD', target: 'HTG', from: '2026-01-01', to: '2026-09-09' },
+  { source: 'USD', target: 'HTG', from: '2026-01-01', to: '2026-09-25' },
   { apiKey: 'art_live_...' }
 );
 ```
@@ -170,11 +170,11 @@ const series = await getHistory(
   source: 'USD',
   target: 'HTG',
   from: '2026-01-01',
-  to: '2026-09-09',
+  to: '2026-09-25',
   count: 152,
   rates: [
     // one entry per publication date
-    { date: '2026-09-09', rate: 130.4876, rate_type: 'reference', derived: false, method: 'published' },
+    { date: '2026-09-25', rate: 130.6863, rate_type: 'reference', derived: false, method: 'published' },
     // …
   ],
   disclaimer: '…'
