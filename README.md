@@ -4,6 +4,8 @@
 [![license](https://img.shields.io/npm/l/brh-exchange-rate.svg)](https://github.com/AllRates-Today/brh-exchange-rate/blob/main/LICENSE)
 [![zero dependencies](https://img.shields.io/badge/dependencies-0-brightgreen.svg)](https://www.npmjs.com/package/brh-exchange-rate)
 [![TypeScript](https://img.shields.io/badge/TypeScript-types%20included-3178C6.svg)](https://www.typescriptlang.org/)
+[![USD/HTG today](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fallratestoday.com%2Fapi%2Fopen%2Fcentral-bank%2Fbrh%3Fsource%3DUSD%26target%3DHTG&query=%24.rate&label=USD%2FHTG%20published%20by%20Banque%20de%20la%20R%C3%A9publique%20d'Ha%C3%AFti&color=0A7E8C&cacheSeconds=3600)](https://allratestoday.com/central-bank-rates-api/brh/)
+[![rate date](https://img.shields.io/badge/dynamic/json?url=https%3A%2F%2Fallratestoday.com%2Fapi%2Fopen%2Fcentral-bank%2Fbrh%3Fsource%3DUSD%26target%3DHTG&query=%24.rate_date&label=rate%20date&color=555&cacheSeconds=3600)](https://allratestoday.com/central-bank-rates-api/brh/)
 
 **Official Banque de la République d'Haïti (Haiti) daily exchange rates for Node.js and TypeScript. The published central bank rates behind tax filings, customs valuations, audits, and compliant invoicing — not market estimates, but the numbers Banque de la République d'Haïti itself prints, every business day.**
 
@@ -32,6 +34,22 @@ console.log(r.rate_date, r.rates.length); // the central bank's latest published
 ```
 
 The open endpoint serves the *latest* table only and asks for a visible attribution link. The client below uses the keyed API, which adds point-in-time tables, history, and CSV/XML/Excel output.
+
+## 📈 Latest published table
+
+Today's full Banque de la République d'Haïti table, straight from the central bank's latest publication. On GitHub it is refreshed by [a daily Action](.github/workflows/daily-table.yml) that reads the keyless endpoint above and commits only when the central bank publishes a new table; the copy on npm is as of the package's publish date.
+
+<!-- daily-table:start -->
+Published **2026-10-08** by Banque de la République d'Haïti — 3 rates. Updated 2026-10-08.
+
+| Base | Quote | Type | Rate |
+| --- | --- | --- | ---: |
+| USD | HTG | buy | 130.2504 |
+| USD | HTG | reference | 130.5102 |
+| USD | HTG | sell | 131.3703 |
+
+Source: [Official rates published by BRH, served by AllRatesToday](https://allratestoday.com/central-bank-rates-api/brh/). Rates are as printed by the central bank; AllRatesToday is not affiliated with it.
+<!-- daily-table:end -->
 
 ## 🔑 Get your API key
 
