@@ -42,13 +42,13 @@ The open endpoint serves the *latest* table only and asks for a visible attribut
 The image is rendered live from the keyless endpoint above, so it follows the central bank's publications on npm and on GitHub alike without a new release. The text copy below is there for search and copy-paste: on GitHub [a daily Action](.github/workflows/daily-table.yml) refreshes it whenever the central bank publishes a new table; on npm it is as of the package's publish date.
 
 <!-- daily-table:start -->
-Published **2026-10-12** by Banque de la République d'Haïti — 3 rates. Updated 2026-10-12.
+Published **2026-10-13** by Banque de la République d'Haïti — 3 rates. Updated 2026-10-13.
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
-| USD | HTG | buy | 130.3146 |
-| USD | HTG | reference | 130.5488 |
-| USD | HTG | sell | 131.295 |
+| USD | HTG | buy | 130.2509 |
+| USD | HTG | reference | 130.5106 |
+| USD | HTG | sell | 131.3737 |
 
 Source: [Official rates published by BRH, served by AllRatesToday](https://allratestoday.com/central-bank-rates-api/brh/). Rates are as printed by the central bank; AllRatesToday is not affiliated with it.
 <!-- daily-table:end -->
