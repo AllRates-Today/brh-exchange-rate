@@ -42,7 +42,7 @@ The open endpoint serves the *latest* table only and asks for a visible attribut
 The image is rendered live from the keyless endpoint above, so it follows the central bank's publications on npm and on GitHub alike without a new release. The text copy below is there for search and copy-paste: on GitHub [a daily Action](.github/workflows/daily-table.yml) refreshes it whenever the central bank publishes a new table; on npm it is as of the package's publish date.
 
 <!-- daily-table:start -->
-Published **2026-10-13** by Banque de la République d'Haïti — 3 rates. Updated 2026-10-13.
+Published **2026-10-13** by Banque de la République d'Haïti — 3 rates. Updated 2026-10-14.
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
@@ -105,10 +105,10 @@ const pair = await getRate('USD', 'HTG', { apiKey: 'art_live_...' });
 {
   bank: 'brh',
   name: 'Banque de la République d\'Haïti',
-  rate_date: '2026-10-12',   // Banque de la République d'Haïti's own publication date
+  rate_date: '2026-10-13',   // Banque de la République d'Haïti's own publication date
   source: 'USD',
   target: 'HTG',
-  rate: 130.5488,
+  rate: 130.5106,
   rate_type: 'reference',
   derived: false,
   method: 'published',
@@ -133,11 +133,11 @@ console.log(table.rate_date, table.rates.length);
 {
   bank: 'brh',
   name: 'Banque de la République d\'Haïti',
-  rate_date: '2026-10-12',
+  rate_date: '2026-10-13',
   rates: [
-    { "base": "USD", "quote": "HTG", "type": "reference", "value": 130.5488 },
-    { "base": "USD", "quote": "HTG", "type": "sell", "value": 131.295 },
-    { "base": "USD", "quote": "HTG", "type": "buy", "value": 130.3146 },
+    { "base": "USD", "quote": "HTG", "type": "reference", "value": 130.5106 },
+    { "base": "USD", "quote": "HTG", "type": "sell", "value": 131.3737 },
+    { "base": "USD", "quote": "HTG", "type": "buy", "value": 130.2509 },
     // … the rest of the published table (1 currency vs HTG)
   ],
   disclaimer: '…'
@@ -177,7 +177,7 @@ Paid plans. One resolved rate per publication date — ready for charting, reval
 import { getHistory } from 'brh-exchange-rate';
 
 const series = await getHistory(
-  { source: 'USD', target: 'HTG', from: '2026-01-01', to: '2026-10-12' },
+  { source: 'USD', target: 'HTG', from: '2026-01-01', to: '2026-10-13' },
   { apiKey: 'art_live_...' }
 );
 ```
@@ -190,11 +190,11 @@ const series = await getHistory(
   source: 'USD',
   target: 'HTG',
   from: '2026-01-01',
-  to: '2026-10-12',
+  to: '2026-10-13',
   count: 152,
   rates: [
     // one entry per publication date
-    { date: '2026-10-12', rate: 130.5488, rate_type: 'reference', derived: false, method: 'published' },
+    { date: '2026-10-13', rate: 130.5106, rate_type: 'reference', derived: false, method: 'published' },
     // …
   ],
   disclaimer: '…'
@@ -313,9 +313,9 @@ getRate('USD', 'HTG', { apiKey: 'art_live_...' }).then((pair) => console.log(pai
 
 Need the whole archive rather than an API call? The same published tables are mirrored daily as open data:
 
-- Hugging Face: [AllRates/central-bank-exchange-rates](https://huggingface.co/datasets/AllRates/central-bank-exchange-rates) — one CSV per institution (`rates/brh.csv`)
+- Hugging Face: [AllRatesToday/central-bank-exchange-rates](https://huggingface.co/datasets/AllRatesToday/central-bank-exchange-rates) — one CSV per institution (`rates/brh.csv`)
 - Kaggle: [allratestoday/central-bank-exchange-rates](https://www.kaggle.com/datasets/allratestoday/central-bank-exchange-rates)
-- CDN JSON: `https://cdn.jsdelivr.net/gh/AllRates-Today/central-bank-exchange-rates@main/data/brh/latest.json`
+- Raw JSON on GitHub: `https://raw.githubusercontent.com/AllRates-Today/central-bank-exchange-rates/main/data/brh/latest.json`
 
 ## 🔗 Links
 
