@@ -20,6 +20,10 @@
 
 > **Official rate, not mid-market:** every value here is a number Banque de la République d'Haïti itself published, fixed once printed and carrying the central bank's own `rate_date` — what filings and audits require. Need the live mid-market rate for pricing or display instead? Use the [mid-market API](https://allratestoday.com/docs/) or [`@allratestoday/sdk`](https://www.npmjs.com/package/@allratestoday/sdk). The two can diverge by several percent.
 
+## 🔑 Get your API key
+
+Get a free API key at [allratestoday.com/register](https://allratestoday.com/register) — no credit card required. Latest rates are on every plan, including free.
+
 ## ⚡ Try it without a key
 
 The latest Banque de la République d'Haïti table is also served keyless, CORS-open and edge-cached, for evaluation, embeds and AI agents:
@@ -43,22 +47,18 @@ The image is rendered live from the keyless endpoint above, so it follows the ce
 
 <!-- daily-table:start -->
 <details>
-<summary>Table as text: published 2026-10-19 by Banque de la République d'Haïti — 3 rates. Updated 2026-10-19.</summary>
+<summary>Table as text: published 2026-10-20 by Banque de la République d'Haïti — 3 rates. Updated 2026-10-20.</summary>
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
-| USD | HTG | buy | 130.3416 |
-| USD | HTG | reference | 130.6049 |
-| USD | HTG | sell | 131.452 |
+| USD | HTG | buy | 130.4742 |
+| USD | HTG | reference | 130.6845 |
+| USD | HTG | sell | 131.544 |
 
 </details>
 
 Source: [Official rates published by BRH, served by AllRatesToday](https://allratestoday.com/central-bank-rates-api/brh/). Rates are as printed by the central bank; AllRatesToday is not affiliated with it.
 <!-- daily-table:end -->
-
-## 🔑 Get your API key
-
-Get a free API key at [allratestoday.com/register](https://allratestoday.com/register) — no credit card required. Latest rates are on every plan, including free.
 
 ## 📦 Installation
 
