@@ -32,13 +32,13 @@ The image is rendered live from the keyless endpoint, so it follows the central 
 
 <!-- daily-table:start -->
 <details>
-<summary>Table as text: published 2026-11-13 by Banque de la République d'Haïti — 3 rates. Updated 2026-11-15.</summary>
+<summary>Table as text: published 2026-11-16 by Banque de la République d'Haïti — 3 rates. Updated 2026-11-16.</summary>
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
-| USD | HTG | buy | 130.5511 |
-| USD | HTG | reference | 130.7907 |
-| USD | HTG | sell | 131.729 |
+| USD | HTG | buy | 130.4728 |
+| USD | HTG | reference | 130.7434 |
+| USD | HTG | sell | 131.6425 |
 
 </details>
 
